@@ -1,5 +1,6 @@
 package cz.cvut.fit.tjv.czcv2.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,9 +12,20 @@ public class Review implements EntityWithId<Long>{
     private int rating;
     private String comment;
     @ManyToOne
+    @JsonIgnoreProperties({"boughtByMe","myReviews"})
     private Buyer author;
     @ManyToOne
+    @JsonIgnoreProperties("reviews")
     private Product product;
+
+    public Review(){}
+    public Review(Long id, int rating, String comment, Buyer author, Product product) {
+        this.id = id;
+        this.rating = rating;
+        this.comment = comment;
+        this.author = author;
+        this.product = product;
+    }
 
     @Override
     public Long getId() {

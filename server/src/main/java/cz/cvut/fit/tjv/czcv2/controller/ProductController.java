@@ -53,8 +53,9 @@ public class ProductController {
     })
     public Product get(@PathVariable Long id){
         Optional<Product> res = productService.readById(id);
-        if(res.isPresent()) return res.get();
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        if(res.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
+        return res.get();
     }
 
     @PutMapping(value = "/{id}")

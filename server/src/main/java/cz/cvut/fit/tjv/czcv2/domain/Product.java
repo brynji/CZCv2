@@ -1,6 +1,7 @@
 package cz.cvut.fit.tjv.czcv2.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -20,6 +21,7 @@ public class Product implements EntityWithId<Long>{
     private int numberOfAvailable;
     private int rating = 0;
     @OneToMany(mappedBy = "product")
+    @JsonIgnoreProperties("product")
     private Collection<Review> reviews = new HashSet<>();
 
     @Override

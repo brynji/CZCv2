@@ -1,5 +1,6 @@
 package cz.cvut.fit.tjv.czcv2.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class Buyer implements EntityWithId<Long>{
     @ManyToMany
     private Collection<Product> boughtByMe = new ArrayList<>();
     @OneToMany(mappedBy = "author")
+    @JsonIgnoreProperties("author")
     private Collection<Review> myReviews = new HashSet<>();
 
     @Override

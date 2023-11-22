@@ -1,7 +1,12 @@
 package cz.cvut.fit.tjv.czcv2.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import cz.cvut.fit.tjv.czcv2.domain.Buyer;
+import cz.cvut.fit.tjv.czcv2.domain.Product;
 import cz.cvut.fit.tjv.czcv2.domain.Review;
+import cz.cvut.fit.tjv.czcv2.dto.ReviewDTO;
+import cz.cvut.fit.tjv.czcv2.service.BuyerService;
+import cz.cvut.fit.tjv.czcv2.service.ProductService;
 import cz.cvut.fit.tjv.czcv2.service.ReviewService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -17,13 +22,28 @@ import java.util.Optional;
 @RequestMapping(value = "/review")
 public class ReviewController {
     private ReviewService reviewService;
+    private BuyerService buyerService;
+    private ProductService productService;
 
-    public ReviewController(ReviewService reviewService) { this.reviewService = reviewService; }
+    public ReviewController(ReviewService reviewService, BuyerService buyerService, ProductService productService) {
+        this.reviewService = reviewService;
+        this.buyerService = buyerService;
+        this.productService = productService;
+    }
 
     @PostMapping
     @Operation(description = "Create new review")
-    public Review create(@RequestBody Review data){
-        data.setId(0L);
+    @ApiResponses({
+            @ApiResponse(responseCode = "200"),
+            @ApiResponse(responseCode = "404", description = "author or product with id given in request body does not exist")
+    })
+    public Review create(@RequestBody ReviewDTO dto){
+        Optional<Buyer> buyer = buyerService.readById(dto.getAuthorId());
+        Optional<Product> product = productService.readById(dto.getProductId());
+        if(buyer.isEmpty() || product.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
+        Review data = new Review(dto.getId(), dto.getRating(), dto.getComment(), buyer.get(), product.get());
+
         return reviewService.create(data);
     }
 
@@ -41,8 +61,9 @@ public class ReviewController {
     })
     public Review get(@PathVariable Long id){
         Optional<Review> res = reviewService.readById(id);
-        if(res.isPresent()) return res.get();
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        if(res.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
+        return res.get();
     }
 
     @PostMapping(value = "/{id}")

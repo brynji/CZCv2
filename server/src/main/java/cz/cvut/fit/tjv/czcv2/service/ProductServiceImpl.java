@@ -16,13 +16,8 @@ public class ProductServiceImpl extends  CrudServiceImpl<Product,Long> implement
     }
 
     @Override
-    public Collection<Product> getAllWithCostLessThan(int cost) {
-        return productRepository.findByCostLessThan(cost);
-    }
-
-    @Override
-    public Collection<Product> getAllWithFilters(int cost, int numberOfAvaible, int rating) {
-        return productRepository.findByCostLessThanAndNumberOfAvailableGreaterThanEqualAndRatingGreaterThanEqual(cost, numberOfAvaible, rating);
+    public Collection<Product> getAllWithFilters(int cost, int numberOfAvailable, int rating) {
+        return productRepository.findByCostLessThanAndNumberOfAvailableGreaterThanEqualAndRatingGreaterThanEqual(cost, numberOfAvailable, rating);
     }
 
     @Override

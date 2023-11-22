@@ -8,8 +8,5 @@ import java.util.Collection;
 
 @Repository
 public interface ProductRepository extends CrudRepository<Product,Long> {
-
-    Collection<Product> findByCostLessThan(int cost);
-
     Collection<Product> findByCostLessThanAndNumberOfAvailableGreaterThanEqualAndRatingGreaterThanEqual(int cost, int numberOfAvailable, int rating);
 }
