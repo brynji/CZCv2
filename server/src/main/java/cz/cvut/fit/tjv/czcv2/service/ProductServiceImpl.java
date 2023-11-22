@@ -21,6 +21,11 @@ public class ProductServiceImpl extends  CrudServiceImpl<Product,Long> implement
     }
 
     @Override
+    public Collection<Product> getAllWithFilters(int cost, int numberOfAvaible, int rating) {
+        return productRepository.findByCostLessThanAndNumberOfAvailableGreaterThanEqualAndRatingGreaterThanEqual(cost, numberOfAvaible, rating);
+    }
+
+    @Override
     protected CrudRepository<Product, Long> getRepository() {
         return productRepository;
     }

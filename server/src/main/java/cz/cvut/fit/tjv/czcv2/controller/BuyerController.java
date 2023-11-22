@@ -119,7 +119,6 @@ public class BuyerController {
         buyerService.update(id,toEdit);
     }
 
-
     @DeleteMapping(value = "/{id}")
     @Operation(description = "delete user with given id")
     @Parameter(description = "id of user that should be removed")

@@ -32,11 +32,16 @@ public class ProductController {
     @GetMapping
     @Operation(description = "return all products")
     @Parameter(description = "return all products with cost less than param")
-    public Iterable<Product> get(@RequestParam Optional<Integer> cost){
-        if(cost.isEmpty()){
-            return productService.readAll();
-        }
-        return productService.getAllWithCostLessThan(cost.get());
+    @Parameter(description = "return all products with available number in stock at least param")
+    @Parameter(description = "return all products with rating at least param")
+    public Iterable<Product> get(@RequestParam Optional<Integer> cost, @RequestParam Optional<Integer> available, @RequestParam Optional<Integer> rating){
+        int costNum=Integer.MAX_VALUE, availableNum=0, ratingNum=0;
+
+        if(cost.isPresent()){ costNum=cost.get(); }
+        if(available.isPresent()){ availableNum=available.get(); }
+        if(rating.isPresent()) { ratingNum=rating.get(); }
+
+        return productService.getAllWithFilters(costNum,availableNum,ratingNum);
     }
 
     @GetMapping(value = "/{id}")

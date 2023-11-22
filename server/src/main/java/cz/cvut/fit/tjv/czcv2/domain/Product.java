@@ -18,6 +18,7 @@ public class Product implements EntityWithId<Long>{
 
     private int cost;
     private int numberOfAvailable;
+    private int rating = 0;
     @OneToMany(mappedBy = "product")
     private Collection<Review> reviews = new HashSet<>();
 
@@ -43,6 +44,10 @@ public class Product implements EntityWithId<Long>{
     public void setNumberOfAvailable(int numberOfAvailable) {
         this.numberOfAvailable = numberOfAvailable;
     }
+
+    public int getRating() { return rating; }
+
+    public void setRating(int rating) { this.rating = rating; }
 
     public int getCost() {
         return cost;
