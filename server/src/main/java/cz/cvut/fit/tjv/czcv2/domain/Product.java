@@ -19,8 +19,8 @@ public class Product implements EntityWithId<Long>{
 
     private int cost;
     private int numberOfAvailable;
-    private int rating = 0;
-    @OneToMany(mappedBy = "product")
+    private double rating = 0;
+    @OneToMany(mappedBy = "product", orphanRemoval = true)
     @JsonIgnoreProperties("product")
     private Collection<Review> reviews = new HashSet<>();
 
@@ -47,9 +47,9 @@ public class Product implements EntityWithId<Long>{
         this.numberOfAvailable = numberOfAvailable;
     }
 
-    public int getRating() { return rating; }
+    public double getRating() { return rating; }
 
-    public void setRating(int rating) { this.rating = rating; }
+    public void setRating(double rating) { this.rating = rating; }
 
     public int getCost() {
         return cost;

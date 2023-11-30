@@ -1,33 +1,40 @@
-package cz.cvut.fit.tjv.czcv2.domain;
+package cz.cvut.fit.tjv.czcClient.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 
-@Entity
-public class Buyer implements EntityWithId<Long>{
-    @Id
-    @GeneratedValue
+public class Buyer{
     private Long id;
     private String username;
     private String address;
     private String realName;
-    @ManyToMany
     private Collection<Product> boughtByMe = new ArrayList<>();
-    @OneToMany(mappedBy = "author", orphanRemoval = true)
     @JsonIgnoreProperties("author")
     private Collection<Review> myReviews = new HashSet<>();
 
-    @Override
+    public Buyer() {
+    }
+
+    public Buyer(Long id, String username, String address, String realName, Collection<Product> boughtByMe, Collection<Review> myReviews) {
+        this.id = id;
+        this.username = username;
+        this.address = address;
+        this.realName = realName;
+        this.boughtByMe = boughtByMe;
+        this.myReviews = myReviews;
+    }
+
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getUsername() {
         return username;
     }

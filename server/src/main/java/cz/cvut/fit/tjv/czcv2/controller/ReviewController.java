@@ -43,8 +43,10 @@ public class ReviewController {
         if(buyer.isEmpty() || product.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
         Review data = new Review(dto.getId(), dto.getRating(), dto.getComment(), buyer.get(), product.get());
+        Review res = reviewService.create(data);
+        res.getProduct().setRating(productService.updateProductRating(dto.getProductId()));
 
-        return reviewService.create(data);
+       return res;
     }
 
     @GetMapping
@@ -76,6 +78,7 @@ public class ReviewController {
     public void edit(@PathVariable Long id, @RequestBody Review data){
         try{
             reviewService.update(id,data);
+            productService.updateProductRating(id);
         } catch (IllegalArgumentException e){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         } catch (IllegalStateException e){
@@ -100,12 +103,18 @@ public class ReviewController {
         if(data.has("comment")) toEdit.setComment(data.get("comment").asText());
 
         reviewService.update(id,toEdit);
+        productService.updateProductRating(id);
     }
 
     @DeleteMapping(value = "/{id}")
     @Operation(description = "delete review with given id")
     @Parameter(description = "id of review that should be removed")
     public void delete(@PathVariable Long id){
+        Optional<Review> review = reviewService.readById(id);
+        if(review.isPresent()){
+            Long productId = review.get().getProduct().getId();
+            productService.updateProductRating(productId);
+        }
         reviewService.deleteById(id);
     }
 

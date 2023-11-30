@@ -26,6 +26,7 @@ public class ProductController {
     @Operation(description = "add new product to stock")
     public Product create(@RequestBody Product data) {
         data.setId(0L);
+        data.setRating(0);
         return productService.create(data);
     }
 
