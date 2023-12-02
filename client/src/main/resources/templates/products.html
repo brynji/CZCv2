@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+<div th:insert="~{fragments::header}"></div>
+<h1>Products</h1>
+
+<h3>Filters:</h3>
+<form method="get" th:action="@{/products}" th:object="${filters}">
+  <div>
+    <label for="cost">Cost: </label>
+    <input type="text" id="cost" th:field="*{cost}"/>
+    <label for="numberOfAvailable">Available: </label>
+    <input type="text" id="numberOfAvailable" th:field="*{numberOfAvailable}"/>
+    <label for="rating">Rating: </label>
+    <input type="text" id="rating" th:field="*{rating}"/>
+  </div>
+  <input type="submit" value="Filter"/>
+</form>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Cost</th>
+    <th>Available</th>
+    <th>Rating</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="p: ${allProducts}">
+    <td th:text="${p.name}">test</td>
+    <td th:text="${p.cost}">I Am Nobody</td>
+    <td th:text="${p.numberOfAvailable}">test</td>
+    <td th:text="${p.rating}">test</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

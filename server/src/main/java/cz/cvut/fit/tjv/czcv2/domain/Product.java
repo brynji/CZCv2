@@ -1,6 +1,5 @@
 package cz.cvut.fit.tjv.czcv2.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,10 +15,9 @@ public class Product implements EntityWithId<Long>{
     @GeneratedValue
     private Long id;
     private String name;
-
     private int cost;
     private int numberOfAvailable;
-    private double rating = 0;
+    private double rating;
     @OneToMany(mappedBy = "product", orphanRemoval = true)
     @JsonIgnoreProperties("product")
     private Collection<Review> reviews = new HashSet<>();

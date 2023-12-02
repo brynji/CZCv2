@@ -70,19 +70,6 @@ public class BuyerController {
         return res.get();
     }
 
-    @GetMapping(value = "/{id}/boughtBy")
-    @Operation(description = "get products bought by user with given id")
-    @ApiResponses({
-            @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "user with given id does not exist")
-    })
-    public Iterable<Product> getBought(@PathVariable Long id){
-        Optional<Buyer> buyer = buyerService.readById(id);
-        if(buyer.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-
-        return buyer.get().getBoughtByMe();
-    }
-
     @PutMapping(value = "/{id}")
     @Operation(description = "overwrite user with given id")
     @Parameter(description = "id of user that should be edited")

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1f7e92f4-1bf7-4144-bf79-f0022b732d30" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/CZCv2Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/BuyerClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ProductClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Filters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/BuyerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/BuyerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/products.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/users.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../client/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../client/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/BuyerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/ReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/CrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/CrudServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ReviewService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2X1KhT9nHPH24apIFryrN1cWeUm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jirka/FIT/TJV/demo-public-client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/META.INF" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CZCv2Main">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #12" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="12" requestIdentifier="#12" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="8" requestIdentifier="#8" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="CZCv2Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="CZCv2.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cz.cvut.fit.tjv.czcv2.CZCv2Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="HTTP Request.generated-requests | #10" />
+      <item itemvalue="HTTP Request.generated-requests | #12" />
+      <item itemvalue="HTTP Request.generated-requests | #8" />
+      <item itemvalue="HTTP Request.generated-requests | #2" />
+      <item itemvalue="Spring Boot.CZCv2Main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="HTTP Request.generated-requests | #10" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
+        <item itemvalue="HTTP Request.generated-requests | #12" />
+        <item itemvalue="HTTP Request.generated-requests | #8" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f7e92f4-1bf7-4144-bf79-f0022b732d30" name="Changes" comment="" />
+      <created>1697791270485</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697791270485</updated>
+      <workItem from="1697791271528" duration="564000" />
+      <workItem from="1698002584749" duration="2789000" />
+      <workItem from="1698083706417" duration="30000" />
+      <workItem from="1698087535717" duration="1565000" />
+      <workItem from="1698138672772" duration="395000" />
+      <workItem from="1698180414784" duration="1251000" />
+      <workItem from="1698306802124" duration="4422000" />
+      <workItem from="1698335613990" duration="483000" />
+      <workItem from="1698336218235" duration="175000" />
+      <workItem from="1698350420772" duration="567000" />
+      <workItem from="1698351888807" duration="253000" />
+      <workItem from="1699009644762" duration="12272000" />
+      <workItem from="1699048383634" duration="2338000" />
+      <workItem from="1699221690772" duration="2211000" />
+      <workItem from="1699520513254" duration="939000" />
+      <workItem from="1699542965320" duration="322000" />
+      <workItem from="1699548957971" duration="3210000" />
+      <workItem from="1699617816720" duration="2709000" />
+      <workItem from="1699801037886" duration="802000" />
+      <workItem from="1699821085215" duration="2735000" />
+      <workItem from="1700322737952" duration="600000" />
+      <workItem from="1700334323098" duration="4980000" />
+      <workItem from="1700386307846" duration="4867000" />
+      <workItem from="1700415375768" duration="1321000" />
+      <workItem from="1700604221545" duration="3524000" />
+      <workItem from="1700685252259" duration="10460000" />
+      <workItem from="1700734697069" duration="696000" />
+      <workItem from="1700745597285" duration="835000" />
+      <workItem from="1700758535956" duration="310000" />
+      <workItem from="1700758850509" duration="293000" />
+      <workItem from="1700760016634" duration="96000" />
+      <workItem from="1700760161811" duration="88000" />
+      <workItem from="1700761567615" duration="13000" />
+      <workItem from="1700761998802" duration="1791000" />
+      <workItem from="1701292569697" duration="1489000" />
+      <workItem from="1701422465854" duration="919000" />
+      <workItem from="1701435265201" duration="2935000" />
+      <workItem from="1701533802087" duration="1952000" />
+      <workItem from="1701536221170" duration="7011000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

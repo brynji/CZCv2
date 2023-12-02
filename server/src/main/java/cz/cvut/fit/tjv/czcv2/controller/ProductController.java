@@ -32,9 +32,9 @@ public class ProductController {
 
     @GetMapping
     @Operation(description = "return all products")
-    @Parameter(description = "return all products with cost less than param")
-    @Parameter(description = "return all products with available number in stock at least param")
-    @Parameter(description = "return all products with rating at least param")
+    @Parameter(name = "cost", description = "return all products with cost less than or equal param")
+    @Parameter(name = "available", description = "return all products with available number in stock at least param")
+    @Parameter(name = "rating", description = "return all products with rating at least param")
     public Iterable<Product> get(@RequestParam Optional<Integer> cost, @RequestParam Optional<Integer> available, @RequestParam Optional<Integer> rating){
         int costNum=Integer.MAX_VALUE, availableNum=0, ratingNum=0;
 

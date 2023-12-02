@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Buyers</title>
+</head>
+<body>
+<div th:insert="~{fragments::header}"></div>
+<h1>List of all buyers</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Username</th>
+    <th>Real Name</th>
+    <th>Bought products</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="u: ${allBuyers}">
+    <td th:text="${u.username}">test</td>
+    <td th:text="${u.realName}">real test</td>
+    <td th:text="${u.boughtByMe}">bought products</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

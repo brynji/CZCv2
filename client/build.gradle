@@ -1,27 +1,27 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.5'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'org.springframework.boot' version '3.2.0-RC2'
+    id 'io.spring.dependency-management' version '1.1.3'
 }
 
-group = 'org.example'
-version = '1.0-SNAPSHOT'
+group = 'cz.cvut.fit.tjv.social_network'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
 
 repositories {
     mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
 }
 
 ext {
-    set('springShellVersion', "2.1.3")
+    set('springShellVersion', "3.2.0-M3")
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-jersey'
-    implementation 'org.springframework.shell:spring-shell-starter'
-}
-
-dependencyManagement {
-    imports {
-        mavenBom "org.springframework.shell:spring-shell-dependencies:${springShellVersion}"
-    }
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    implementation 'org.springframework.shell:spring-shell-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 }

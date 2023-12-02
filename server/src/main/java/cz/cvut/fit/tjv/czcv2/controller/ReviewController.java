@@ -78,7 +78,7 @@ public class ReviewController {
     public void edit(@PathVariable Long id, @RequestBody Review data){
         try{
             reviewService.update(id,data);
-            productService.updateProductRating(id);
+            productService.updateProductRating(data.getProduct().getId());
         } catch (IllegalArgumentException e){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         } catch (IllegalStateException e){
@@ -103,7 +103,7 @@ public class ReviewController {
         if(data.has("comment")) toEdit.setComment(data.get("comment").asText());
 
         reviewService.update(id,toEdit);
-        productService.updateProductRating(id);
+        productService.updateProductRating(saved.get().getProduct().getId());
     }
 
     @DeleteMapping(value = "/{id}")
@@ -111,11 +111,11 @@ public class ReviewController {
     @Parameter(description = "id of review that should be removed")
     public void delete(@PathVariable Long id){
         Optional<Review> review = reviewService.readById(id);
+        reviewService.deleteById(id);
         if(review.isPresent()){
             Long productId = review.get().getProduct().getId();
             productService.updateProductRating(productId);
         }
-        reviewService.deleteById(id);
     }
 
 }

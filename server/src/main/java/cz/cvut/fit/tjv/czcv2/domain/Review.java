@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
-
 public class Review implements EntityWithId<Long>{
     @Id
     @GeneratedValue

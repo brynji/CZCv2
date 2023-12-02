@@ -73,4 +73,9 @@ public class Product {
     public void setReviews(Collection<Review> reviews) {
         this.reviews = reviews;
     }
+
+    @Override
+    public String toString() {
+        return "Product: "+getName()+", cost: "+getCost();
+    }
 }
