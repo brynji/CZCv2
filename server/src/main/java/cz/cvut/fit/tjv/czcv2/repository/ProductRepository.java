@@ -1,6 +1,7 @@
 package cz.cvut.fit.tjv.czcv2.repository;
 
 import cz.cvut.fit.tjv.czcv2.domain.Product;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -12,6 +13,7 @@ import java.util.Collection;
 public interface ProductRepository extends CrudRepository<Product,Long> {
     Collection<Product> findByCostLessThanEqualAndNumberOfAvailableGreaterThanEqualAndRatingGreaterThanEqual(int cost, int numberOfAvailable, double rating);
     @Modifying
+    @Transactional
     @Query("UPDATE Product p SET p.rating = COALESCE((SELECT AVG(r.rating) FROM Review r WHERE r.product.id = :id),0) WHERE p.id = :id")
     void updateProductRating(Long id);
 

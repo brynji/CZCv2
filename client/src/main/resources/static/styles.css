@@ -1,0 +1,46 @@
+h1 {
+    color: hotpink;
+}
+
+/* MAIN HEADER */
+.main-header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    background-color: #702b2b;
+}
+.main-header li{
+    float: left;
+}
+.main-header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.main-header li a:hover {
+    background-color: #c91a1a;
+}
+
+/* PRODUCTS TABLE */
+.products-table {
+    border-collapse: collapse;
+    margin-top: 40px;
+    width: 100%;
+}
+.products-table th {
+    text-align: left;
+}
+.products-table td {
+    border-top: 1px solid black;
+    padding: 10px;
+}
+.products-table tr:nth-child(even) {
+    background-color: #f5efef;
+}
+.products-table tr:hover {
+    background-color: #f1bad2;
+}

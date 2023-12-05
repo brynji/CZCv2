@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/styles.css" th:href="@{/styles.css}"/>
     <title>Products</title>
 </head>
 <body>
@@ -9,7 +10,7 @@
 <h1>Products</h1>
 
 <h3>Filters:</h3>
-<form method="get" th:action="@{/products}" th:object="${filters}">
+<form class="products-filters" method="get" th:action="@{/products}" th:object="${filters}">
   <div>
     <label for="cost">Cost: </label>
     <input type="text" id="cost" th:field="*{cost}"/>
@@ -21,23 +22,28 @@
   <input type="submit" value="Filter"/>
 </form>
 
-<table>
+<table class="products-table">
   <thead>
   <tr>
     <th>Name</th>
+    <th>Rating</th>
     <th>Cost</th>
     <th>Available</th>
-    <th>Rating</th>
   </tr>
   </thead>
   <tbody>
-  <tr th:each="p: ${allProducts}">
-    <td th:text="${p.name}">test</td>
-    <td th:text="${p.cost}">I Am Nobody</td>
-    <td th:text="${p.numberOfAvailable}">test</td>
-    <td th:text="${p.rating}">test</td>
+  <tr th:each="p: ${allProducts}" th:onclick="'navigateTo(' + ${p.id} + ')'">
+    <td th:text="${p.name}" >test</td>
+    <td th:text="${#numbers.formatDecimal(p.rating,1,0)}">95</td>
+    <td th:text="${p.cost}">1250</td>
+    <td th:text="${p.numberOfAvailable}">0</td>
   </tr>
   </tbody>
 </table>
+<script>
+  function navigateTo(productId) {
+    window.location.href = window.location.origin + '/products/' + productId;
+  }
+</script>
 </body>
 </html>

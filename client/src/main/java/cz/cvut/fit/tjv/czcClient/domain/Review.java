@@ -6,18 +6,14 @@ public class Review {
     private Long id;
     private int rating;
     private String comment;
-    private Long authorId;
-    private Long productId;
+    @JsonIgnoreProperties({"boughtByMe","myReviews"})
+    private Buyer author;
+    @JsonIgnoreProperties("reviews")
+    private Product product;
 
-    public Review() {
-    }
-
-    public Review(Long id, int rating, String comment, Long authorId, Long productId) {
-        this.id = id;
-        this.rating = rating;
-        this.comment = comment;
-        this.authorId = authorId;
-        this.productId = productId;
+    @Override
+    public String toString() {
+        return author.getRealName()+": "+comment+"\n Rating: "+rating;
     }
 
     public Long getId() {
@@ -44,19 +40,19 @@ public class Review {
         this.comment = comment;
     }
 
-    public Long getAuthorId() {
-        return authorId;
+    public Buyer getAuthor() {
+        return author;
     }
 
-    public void setAuthorId(Long authorId) {
-        this.authorId = authorId;
+    public void setAuthor(Buyer author) {
+        this.author = author;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }

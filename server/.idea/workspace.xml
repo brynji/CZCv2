@@ -5,42 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f7e92f4-1bf7-4144-bf79-f0022b732d30" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/CZCv2Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/BuyerClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ProductClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Filters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/BuyerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/BuyerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/products.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/users.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../client/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../client/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ReviewClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/ReviewDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ReviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/productDetails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Buyer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/users.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/BuyerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/ReviewRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/CrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/CrudServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ReviewService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,13 +97,13 @@
     <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #12" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="12" requestIdentifier="#12" runType="Run single request">
+    <configuration name="generated-requests | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="11" requestIdentifier="#11" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="8" requestIdentifier="#8" runType="Run single request">
+    <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="CZCv2Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -136,20 +116,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="HTTP Request.generated-requests | #5" />
+      <item itemvalue="HTTP Request.generated-requests | #11" />
       <item itemvalue="HTTP Request.generated-requests | #1" />
       <item itemvalue="HTTP Request.generated-requests | #10" />
-      <item itemvalue="HTTP Request.generated-requests | #12" />
-      <item itemvalue="HTTP Request.generated-requests | #8" />
       <item itemvalue="HTTP Request.generated-requests | #2" />
       <item itemvalue="Spring Boot.CZCv2Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="HTTP Request.generated-requests | #11" />
         <item itemvalue="HTTP Request.generated-requests | #10" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
-        <item itemvalue="HTTP Request.generated-requests | #12" />
-        <item itemvalue="HTTP Request.generated-requests | #8" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="HTTP Request.generated-requests | #5" />
       </list>
     </recent_temporary>
   </component>
@@ -200,6 +180,8 @@
       <workItem from="1701435265201" duration="2935000" />
       <workItem from="1701533802087" duration="1952000" />
       <workItem from="1701536221170" duration="7011000" />
+      <workItem from="1701721258789" duration="2669000" />
+      <workItem from="1701786900273" duration="6357000" />
     </task>
     <servers />
   </component>

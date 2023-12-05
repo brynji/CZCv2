@@ -13,12 +13,12 @@ public class Buyer{
     private String realName;
     private Collection<Product> boughtByMe = new ArrayList<>();
     @JsonIgnoreProperties("author")
-    private Collection<Review> myReviews = new HashSet<>();
+    private Collection<ReviewDto> myReviews = new HashSet<>();
 
     public Buyer() {
     }
 
-    public Buyer(Long id, String username, String address, String realName, Collection<Product> boughtByMe, Collection<Review> myReviews) {
+    public Buyer(Long id, String username, String address, String realName, Collection<Product> boughtByMe, Collection<ReviewDto> myReviews) {
         this.id = id;
         this.username = username;
         this.address = address;
@@ -67,11 +67,11 @@ public class Buyer{
         this.boughtByMe = boughtByMe;
     }
 
-    public Collection<Review> getMyReviews() {
+    public Collection<ReviewDto> getMyReviews() {
         return myReviews;
     }
 
-    public void setMyReviews(Collection<Review> myReviews) {
+    public void setMyReviews(Collection<ReviewDto> myReviews) {
         this.myReviews = myReviews;
     }
 }
