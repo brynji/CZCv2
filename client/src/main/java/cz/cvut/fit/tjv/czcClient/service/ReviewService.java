@@ -26,4 +26,5 @@ public class ReviewService {
     public Optional<Review> getOne(){ return reviewClient.getOne(); }
     public Collection<Review> getAll(){ return reviewClient.getAll(); }
     public void update(ReviewDto data){ reviewClient.update(data); }
+    public void delete(){ reviewClient.delete(); }
 }

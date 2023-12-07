@@ -56,4 +56,10 @@ public class BuyerClient {
                 .retrieve()
                 .toBodilessEntity();
     }
+
+    public void delete(){
+        currentBuyerRestClient.delete()
+                .retrieve()
+                .toBodilessEntity();
+    }
 }

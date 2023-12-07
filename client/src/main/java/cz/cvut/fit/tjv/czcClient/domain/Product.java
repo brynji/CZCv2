@@ -6,9 +6,9 @@ import java.util.Collection;
 import java.util.HashSet;
 
 public class Product {
-    private Long id;
+    private Long id = 0L;
     private String name;
-    private int cost;
+    private int cost = 0;
     private int numberOfAvailable;
     private double rating = 0;
     @JsonIgnoreProperties("product")

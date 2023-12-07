@@ -12,7 +12,10 @@
     <p th:text="'Rating: ' + *{rating}">Rating 5 </p>
     <p th:text="'Cost: ' + *{cost}">Cost 100 </p>
     <p th:text="'Reviews: ' + *{reviews}">Reviews </p>
-</div>
 
+    <a href="/review/add">Add review</a>
+    <a th:href="'/products/'+${id}+'/delete'">Delete product</a>
+    <a th:href="'/products/'+${id}+'/edit'">Edit product</a>
+</div>
 </body>
 </html>

@@ -58,4 +58,10 @@ public class ReviewClient {
                 .retrieve()
                 .toBodilessEntity();
     }
+
+    public void delete(){
+        currentReviewRestClient.delete()
+                .retrieve()
+                .toBodilessEntity();
+    }
 }

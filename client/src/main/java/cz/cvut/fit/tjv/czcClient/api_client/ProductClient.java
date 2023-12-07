@@ -65,4 +65,10 @@ public class ProductClient {
                 .retrieve()
                 .toBodilessEntity();
     }
+
+    public void delete(){
+        currentProductRestClient.delete()
+                .retrieve()
+                .toBodilessEntity();
+    }
 }

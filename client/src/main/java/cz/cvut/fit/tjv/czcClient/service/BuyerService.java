@@ -22,5 +22,6 @@ public class BuyerService {
     public void create(Buyer data){ buyerClient.create(data); }
     public Optional<Buyer> getOne(){ return buyerClient.getOne(); }
     public Collection<Buyer> getAll(){ return buyerClient.getAll(); }
-    public void update(Buyer data){ buyerClient.update(data);}
+    public void update(Buyer data){ buyerClient.update(data); }
+    public void delete(){ buyerClient.delete(); }
 }

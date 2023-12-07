@@ -24,4 +24,5 @@ public class ProductService {
     public Optional<Product> getOne(){ return productClient.getOne(); }
     public Collection<Product> getAll(Filters filters){ return productClient.getAll(filters); }
     public void update(Product data){ productClient.update(data); }
+    public void delete(){ productClient.delete(); }
 }
