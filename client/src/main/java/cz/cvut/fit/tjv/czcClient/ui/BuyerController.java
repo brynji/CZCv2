@@ -19,6 +19,6 @@ public class BuyerController {
     public String buyerList(Model model){
         var all = buyerService.getAll();
         model.addAttribute("allBuyers",all);
-        return "users";
+        return "buyers";
     }
 }

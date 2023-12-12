@@ -8,4 +8,5 @@ public class CZCv2Client {
     public static void main(String [] args){
         SpringApplication.run(CZCv2Client.class,args);
     }
+
 }

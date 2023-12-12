@@ -8,12 +8,15 @@
 <body>
 <div th:insert="~{fragments::header}"></div>
 <h1> Add new review</h1>
-<form method="post" th:action="@{/review/add}" th:object="${newReview}">
+<form method="post" th:action="@{/reviews/add}" th:object="${newReview}">
   <div>
     <label for="rating">Rating: </label>
+    <input type="hidden" th:field="*{productId}">
     <input type="number" id="rating" th:field="*{rating}" required>
-    <label for="comment">Cost: </label>
+    <label for="comment">Comment: </label>
     <input type="text" id="comment" th:field="*{comment}">
+    <label for="authorId">AuthorID: </label>
+    <input type="text" id="authorId" th:field="*{authorId}">
   </div>
   <input type="submit" value="Add"/>
   <input type="reset"/>

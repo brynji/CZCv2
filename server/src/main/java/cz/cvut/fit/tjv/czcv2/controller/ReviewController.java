@@ -35,18 +35,22 @@ public class ReviewController {
     @Operation(description = "Create new review")
     @ApiResponses({
             @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "author or product with id given in request body does not exist")
+            @ApiResponse(responseCode = "404", description = "author or product with id given in request body does not exist"),
+            @ApiResponse(responseCode = "409", description = "author already posted review of that product")
     })
     public Review create(@RequestBody ReviewDTO dto){
+        dto.setId(0L);
         Optional<Buyer> buyer = buyerService.readById(dto.getAuthorId());
         Optional<Product> product = productService.readById(dto.getProductId());
         if(buyer.isEmpty() || product.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
         Review data = new Review(dto.getId(), dto.getRating(), dto.getComment(), buyer.get(), product.get());
-        Review res = reviewService.create(data);
-        res.getProduct().setRating(productService.updateProductRating(dto.getProductId()));
 
-       return res;
+        try{
+            return reviewService.create(data);
+        } catch (UnsupportedOperationException e){
+            throw new ResponseStatusException(HttpStatus.CONFLICT);
+        }
     }
 
     @GetMapping
@@ -78,7 +82,6 @@ public class ReviewController {
     public void edit(@PathVariable Long id, @RequestBody Review data){
         try{
             reviewService.update(id,data);
-            productService.updateProductRating(data.getProduct().getId());
         } catch (IllegalArgumentException e){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         } catch (IllegalStateException e){
@@ -110,12 +113,7 @@ public class ReviewController {
     @Operation(description = "delete review with given id")
     @Parameter(description = "id of review that should be removed")
     public void delete(@PathVariable Long id){
-        Optional<Review> review = reviewService.readById(id);
         reviewService.deleteById(id);
-        if(review.isPresent()){
-            Long productId = review.get().getProduct().getId();
-            productService.updateProductRating(productId);
-        }
     }
 
 }

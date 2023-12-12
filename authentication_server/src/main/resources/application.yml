@@ -1,0 +1,24 @@
+server:
+  port: 9000
+  address: 10.0.2.15
+
+spring:
+  security:
+    oauth2:
+      authorizationserver:
+        client:
+          czcv2:
+            registration:
+              client-id: czcv2
+              client-secret: "{noop}secret"
+              client-authentication-methods:
+                - client_secret_basic
+              client-name: czcv2
+              scopes:
+                - openid
+                - profile
+              authorization-grant-types:
+                - authorization_code
+                - refresh_token
+              redirect-uris:
+                - "http://127.0.0.1:9080/login/oauth2/code/czcv2"

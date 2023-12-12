@@ -3,6 +3,11 @@ package cz.cvut.fit.tjv.czcClient.service;
 import cz.cvut.fit.tjv.czcClient.api_client.ProductClient;
 import cz.cvut.fit.tjv.czcClient.domain.Filters;
 import cz.cvut.fit.tjv.czcClient.domain.Product;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -23,6 +28,8 @@ public class ProductService {
     public void create(Product data){ productClient.create(data); }
     public Optional<Product> getOne(){ return productClient.getOne(); }
     public Collection<Product> getAll(Filters filters){ return productClient.getAll(filters); }
-    public void update(Product data){ productClient.update(data); }
+    public void update(Product data){
+        productClient.update(data);
+    }
     public void delete(){ productClient.delete(); }
 }

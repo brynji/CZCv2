@@ -2,10 +2,14 @@ package cz.cvut.fit.tjv.czcClient.service;
 
 import cz.cvut.fit.tjv.czcClient.api_client.BuyerClient;
 import cz.cvut.fit.tjv.czcClient.domain.Buyer;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Optional;
+
+import static org.springframework.security.core.context.SecurityContextHolder.getContext;
 
 @Service
 public class BuyerService {
@@ -20,7 +24,9 @@ public class BuyerService {
     }
 
     public void create(Buyer data){ buyerClient.create(data); }
-    public Optional<Buyer> getOne(){ return buyerClient.getOne(); }
+    public Optional<Buyer> getOne(){
+        return buyerClient.getOne();
+    }
     public Collection<Buyer> getAll(){ return buyerClient.getAll(); }
     public void update(Buyer data){ buyerClient.update(data); }
     public void delete(){ buyerClient.delete(); }

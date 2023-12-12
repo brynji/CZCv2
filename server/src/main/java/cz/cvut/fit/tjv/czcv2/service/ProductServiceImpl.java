@@ -30,4 +30,15 @@ public class ProductServiceImpl extends  CrudServiceImpl<Product,Long> implement
     protected CrudRepository<Product, Long> getRepository() {
         return productRepository;
     }
+
+    @Override
+    public Product create(Product e) {
+        if (getRepository().existsById(e.getId())){
+            throw new IllegalArgumentException();
+        }
+        var res = getRepository().save(e);
+        updateProductRating(res.getId());
+        return res;
+    }
+
 }
