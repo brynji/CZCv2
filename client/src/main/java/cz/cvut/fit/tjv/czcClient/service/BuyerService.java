@@ -2,14 +2,9 @@ package cz.cvut.fit.tjv.czcClient.service;
 
 import cz.cvut.fit.tjv.czcClient.api_client.BuyerClient;
 import cz.cvut.fit.tjv.czcClient.domain.Buyer;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Service;
-
 import java.util.Collection;
 import java.util.Optional;
-
-import static org.springframework.security.core.context.SecurityContextHolder.getContext;
 
 @Service
 public class BuyerService {

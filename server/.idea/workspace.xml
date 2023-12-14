@@ -5,13 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f7e92f4-1bf7-4144-bf79-f0022b732d30" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../authentication_server/src/main/java/cz/cvut/fit/tjv/czcv2_authorization_server/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication_server/src/main/java/cz/cvut/fit/tjv/czcv2_authorization_server/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/src/main/java/cz/cvut/fit/tjv/czcv2_authorization_server/AuthorizationServer106Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/src/main/java/cz/cvut/fit/tjv/czcv2_authorization_server/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/src/main/java/cz/cvut/fit/tjv/czcv2_authorization_server/domain/Authorities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/src/main/java/cz/cvut/fit/tjv/czcv2_authorization_server/domain/Users.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication_server/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../client/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/BuyerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/BuyerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ProductClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ReviewClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ReviewClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/BuyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/BuyerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +48,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -55,35 +80,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/jirka/FIT/TJV/demo-public-client",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jirka/FIT/TJV/demo-public-client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/META.INF" />
@@ -95,7 +120,7 @@
       <recent name="cz.cvut.fit.tjv.czcv2.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ProductServiceIntegrationTest.test">
+  <component name="RunManager" selected="Spring Boot.CZCv2Main">
     <configuration name="ProductRepositoryTest.idk" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -315,6 +340,7 @@
       <workItem from="1702390336185" duration="4338000" />
       <workItem from="1702402318918" duration="4650000" />
       <workItem from="1702572907462" duration="4636000" />
+      <workItem from="1702593887827" duration="381000" />
     </task>
     <servers />
   </component>

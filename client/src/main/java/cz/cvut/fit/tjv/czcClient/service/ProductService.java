@@ -3,11 +3,6 @@ package cz.cvut.fit.tjv.czcClient.service;
 import cz.cvut.fit.tjv.czcClient.api_client.ProductClient;
 import cz.cvut.fit.tjv.czcClient.domain.Filters;
 import cz.cvut.fit.tjv.czcClient.domain.Product;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
