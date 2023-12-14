@@ -6,8 +6,8 @@ import jakarta.persistence.*;
 @Entity
 public class Review implements EntityWithId<Long>{
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+    @GeneratedValue
+    private Long id = 0L;
     private int rating;
     private String comment;
     @ManyToOne

@@ -17,7 +17,7 @@ class ProductServiceIntegrationTest {
     @Autowired
     ReviewService reviewService;
 
-    @Test
+    @Transactional
     void updateRating(){
         Product p = new Product();
         p.setId(1L);
@@ -38,7 +38,13 @@ class ProductServiceIntegrationTest {
         reviewService.create(r);
         System.out.println("Product rating with one review: "+productService.readById(pDb.getId()).get().getRating());
         var revs = productService.readById(pDb.getId()).get().getReviews();
-        revs.size();
+        System.out.println("Product reviews: "+revs);
+    }
+    @Test
+    void test(){
+        updateRating();
+        System.out.println("Product rating with one review: "+productService.readById(1L).get().getRating());
+        var revs = productService.readById(1L).get().getReviews();
         System.out.println("Product reviews: "+revs);
     }
 }

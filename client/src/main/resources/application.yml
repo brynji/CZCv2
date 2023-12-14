@@ -12,6 +12,7 @@ spring:
             authorization-grant-type: authorization_code
             scope:
               - openid
+              -
               - profile
             provider: czcv2_auth
         provider:
