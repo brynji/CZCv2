@@ -7,10 +7,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
-
-import java.util.List;
 
 @DataJpaTest
 public class ProductRepositoryTest {
@@ -21,51 +17,42 @@ public class ProductRepositoryTest {
     @Autowired
     private ReviewRepository reviewRepository;
 
-    //Test if updateProductRating correctly calculates rating
-    /*@Test
-    void updateProductRating(){
-        Product product = new Product();
-        Buyer buyer = new Buyer();
-        Review review = new Review();
-        Review review1 = new Review();
-        Review review2 = new Review();
-
-        product.setName("test");
-        review.setRating(100);
-        review1.setRating(50);
-        review2.setRating(0);
-
-        Long id = productRepository.save(product).getId();
-        Buyer buyerInDb = buyerRepository.save(buyer);
-
-        Assertions.assertEquals(0,productRepository.findById(id).get().getRating());
-
-        review.setProduct(productRepository.findById(id).get());
-        review.setAuthor(buyerInDb);
-        System.out.println(reviewRepository.save(review).getProduct());
-        System.out.println(buyerRepository.findById(buyerInDb.getId()).get().getMyReviews());
-        productRepository.updateProductRating(id);
-        System.out.println(productRepository.findById(id).get());
-        Assertions.assertEquals(100,productRepository.findById(id).get().getRating());
-
-    }*/
-
     @Test
-    void idk(){
-        Buyer buyer = new Buyer();
-        buyer.setUsername("xd"); buyer.setRealName("Dan"); buyer.setAddress("asd315");
-        Product product = new Product();
-        product.setName("aaaa"); product.setCost(20); product.setNumberOfAvailable(3);
-        var p =productRepository.save(product);
-        var b =buyerRepository.save(buyer);
-
+    void updateProductRating(){
+        Product product  = new Product(); product.setId(1L);  product.setCost(10);  product.setNumberOfAvailable(0);  product.setRating(0);
+        Buyer buyer = new Buyer(); buyer.setId(1L);
         Review review = new Review();
-        review.setProduct(p); review.setAuthor(b); review.setRating(50); review.setComment("Best");
-        var r = reviewRepository.save(review);
-        System.out.println("Buyer reviews: "+buyerRepository.findById(b.getId()).get().getMyReviews().toString());
-        System.out.println("Product reviews: "+productRepository.findById(p.getId()).get().getReviews());
-        var rdb = reviewRepository.findById(r.getId()).get();
-        System.out.println("Review: Product "+rdb.getProduct().getName()+", Author "+rdb.getAuthor().getUsername()+", Author reviews "+rdb.getAuthor().getMyReviews().toString());
-        System.out.println("All authors: "+buyerRepository.findAll().toString());
+
+        var pr = productRepository.save(product);
+        var bu = buyerRepository.save(buyer);
+        Long id = pr.getId();
+
+        review.setProduct(pr);
+        review.setAuthor(bu);
+        review.setId(1L);
+
+        productRepository.updateProductRating(pr.getId());
+        Assertions.assertEquals(0,productRepository.getProductRating(id));
+
+        review.setRating(50);
+        reviewRepository.save(review);
+        productRepository.updateProductRating(pr.getId());
+        Assertions.assertEquals(50,productRepository.getProductRating(id));
+
+        review.setId(2L);
+        review.setRating(100);
+        reviewRepository.save(review);
+        productRepository.updateProductRating(pr.getId());
+        Assertions.assertEquals(75,productRepository.getProductRating(id));
+
+        review.setId(3L);
+        review.setRating(0);
+        reviewRepository.save(review);
+        productRepository.updateProductRating(pr.getId());
+        Assertions.assertEquals(50,productRepository.getProductRating(id));
+
+        reviewRepository.deleteAll();
+        productRepository.updateProductRating(pr.getId());
+        Assertions.assertEquals(0,productRepository.getProductRating(id));
     }
 }

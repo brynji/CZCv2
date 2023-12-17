@@ -10,6 +10,9 @@ import cz.cvut.fit.tjv.czcv2.service.ProductService;
 import cz.cvut.fit.tjv.czcv2.service.ReviewService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.HttpStatus;
@@ -35,8 +38,8 @@ public class ReviewController {
     @Operation(description = "Create new review")
     @ApiResponses({
             @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "author or product with id given in request body does not exist"),
-            @ApiResponse(responseCode = "409", description = "author already posted review of that product")
+            @ApiResponse(responseCode = "404", description = "author or product with id given in request body does not exist", content=@Content),
+            @ApiResponse(responseCode = "409", description = "author already posted review of that product", content=@Content)
     })
     public Review create(@RequestBody ReviewDTO dto){
         dto.setId(0L);
@@ -55,6 +58,8 @@ public class ReviewController {
 
     @GetMapping
     @Operation(description = "return all reviews")
+    @ApiResponses(value = { @ApiResponse( content = {
+            @Content( mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = Review.class)))})})
     public Iterable<Review> get(){
         return reviewService.readAll();
     }
@@ -63,7 +68,7 @@ public class ReviewController {
     @Operation(description = "return review with given id")
     @ApiResponses({
             @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "review with given id does not exist")
+            @ApiResponse(responseCode = "404", description = "review with given id does not exist", content=@Content)
     })
     public Review get(@PathVariable Long id){
         Optional<Review> res = reviewService.readById(id);
@@ -72,12 +77,12 @@ public class ReviewController {
         return res.get();
     }
 
-    @PostMapping(value = "/{id}")
+    @PutMapping(value = "/{id}")
     @Operation(description = "overwrite review with given id")
     @ApiResponses({
             @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "review with given id does not exist"),
-            @ApiResponse(responseCode = "409", description = "id of given review does not match id of review that should be edited")
+            @ApiResponse(responseCode = "404", description = "review with given id does not exist", content=@Content),
+            @ApiResponse(responseCode = "409", description = "id of given review does not match id of review that should be edited", content=@Content)
     })
     public void edit(@PathVariable Long id, @RequestBody Review data){
         try{
@@ -87,26 +92,6 @@ public class ReviewController {
         } catch (IllegalStateException e){
             throw new ResponseStatusException(HttpStatus.CONFLICT);
         }
-    }
-
-    @PatchMapping(value = "/{id}")
-    @Operation(description = "edit review with given id")
-    @Parameter(description = "id of review that should be edited")
-    @ApiResponses({
-            @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "review with given id does not exist")
-    })
-    public void patch(@PathVariable Long id, @RequestBody JsonNode data){
-        Optional<Review> saved = reviewService.readById(id);
-        if(saved.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-
-        Review toEdit = saved.get();
-
-        if(data.has("rating")) toEdit.setRating(data.get("rating").asInt());
-        if(data.has("comment")) toEdit.setComment(data.get("comment").asText());
-
-        reviewService.update(id,toEdit);
-        productService.updateProductRating(saved.get().getProduct().getId());
     }
 
     @DeleteMapping(value = "/{id}")

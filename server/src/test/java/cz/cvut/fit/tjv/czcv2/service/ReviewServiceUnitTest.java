@@ -15,8 +15,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class ReviewServiceUnitTest {
     @Autowired
@@ -68,6 +66,7 @@ class ReviewServiceUnitTest {
 
         Assertions.assertEquals(product.getRating(),review.getRating());
         Mockito.verify(reviewRepository,Mockito.atLeastOnce()).save(review);
+        Mockito.verify(productRepository,Mockito.atLeastOnce()).updateProductRating(product.getId());
     }
 
     @Test

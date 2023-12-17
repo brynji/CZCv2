@@ -8,23 +8,28 @@
 <body>
 <div th:insert="~{fragments::header}"></div>
 <h1>List of all buyers</h1>
-<table>
+<table class="fancy-table">
   <thead>
   <tr>
-    <th>Id</th>
     <th>Username</th>
     <th>Real Name</th>
     <th>Bought products</th>
   </tr>
   </thead>
   <tbody>
-  <tr th:each="u: ${allBuyers}">
-    <td th:text="${u.id}">id</td>
+  <tr th:each="u: ${allBuyers}" th:onclick="'navigateTo(' + ${u.id} + ')'">
+    <td th:hidden="${u.id}">id</td>
     <td th:text="${u.username}">test</td>
     <td th:text="${u.realName}">real test</td>
     <td th:text="${u.boughtByMe}">bought products</td>
   </tr>
   </tbody>
 </table>
+<a class="addNewButton" href="/buyers/add">Add new buyer</a>
+<script>
+  function navigateTo(productId) {
+    window.location.href = window.location.origin + '/products/' + productId;
+  }
+</script>
 </body>
 </html>

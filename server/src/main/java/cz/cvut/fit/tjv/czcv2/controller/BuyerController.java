@@ -1,12 +1,14 @@
 package cz.cvut.fit.tjv.czcv2.controller;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import cz.cvut.fit.tjv.czcv2.domain.Buyer;
 import cz.cvut.fit.tjv.czcv2.domain.Product;
 import cz.cvut.fit.tjv.czcv2.service.BuyerService;
 import cz.cvut.fit.tjv.czcv2.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.HttpStatus;
@@ -37,7 +39,7 @@ public class BuyerController {
     @Operation(description = "add new bought product to user with given id")
     @ApiResponses({
             @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "user or product with given id does not exist")
+            @ApiResponse(responseCode = "404", description = "user or product with given id does not exist", content=@Content)
     })
     public Buyer addBought(@PathVariable Long id, @PathVariable Long productId){
         Optional<Product> toAdd = productService.readById(productId);
@@ -52,6 +54,8 @@ public class BuyerController {
 
     @GetMapping
     @Operation(description = "return all registered users")
+    @ApiResponses(value = { @ApiResponse( content = {
+            @Content( mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = Buyer.class)))})})
     public Iterable<Buyer> get(){
         return buyerService.readAll();
     }
@@ -61,7 +65,7 @@ public class BuyerController {
     @Parameter(description = "id of user that should be returned")
     @ApiResponses({
             @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "user with given id does not exist")
+            @ApiResponse(responseCode = "404", description = "user with given id does not exist", content=@Content)
     })
     public Buyer get(@PathVariable Long id){
         Optional<Buyer> res = buyerService.readById(id);
@@ -75,8 +79,8 @@ public class BuyerController {
     @Parameter(description = "id of user that should be edited")
     @ApiResponses({
             @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "user with given id does not exist"),
-            @ApiResponse(responseCode = "409", description = "id of given user does not match id of user that should be edited")
+            @ApiResponse(responseCode = "404", description = "user with given id does not exist", content=@Content),
+            @ApiResponse(responseCode = "409", description = "id of given user does not match id of user that should be edited", content=@Content)
     })
     public void edit(@PathVariable Long id, @RequestBody Buyer data){
         try{
@@ -86,26 +90,6 @@ public class BuyerController {
         } catch (IllegalStateException e){
             throw new ResponseStatusException(HttpStatus.CONFLICT);
         }
-    }
-
-    @PatchMapping(value = "/{id}")
-    @Operation(description = "edit user with given id")
-    @Parameter(description = "id of user that should be edited")
-    @ApiResponses({
-            @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "user with given id does not exist")
-    })
-    public void patch(@PathVariable Long id, @RequestBody JsonNode data){
-        Optional<Buyer> saved = buyerService.readById(id);
-        if(saved.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-
-        Buyer toEdit = saved.get();
-
-        if(data.has("username")) toEdit.setUsername(data.get("username").asText());
-        if(data.has("address")) toEdit.setAddress(data.get("address").asText());
-        if(data.has("realName")) toEdit.setRealName(data.get("realName").asText());
-
-        buyerService.update(id,toEdit);
     }
 
     @DeleteMapping(value = "/{id}")

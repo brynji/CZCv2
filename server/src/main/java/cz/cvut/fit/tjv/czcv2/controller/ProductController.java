@@ -5,6 +5,9 @@ import cz.cvut.fit.tjv.czcv2.domain.Product;
 import cz.cvut.fit.tjv.czcv2.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.HttpStatus;
@@ -32,9 +35,11 @@ public class ProductController {
 
     @GetMapping
     @Operation(description = "return all products")
-    @Parameter(name = "cost", description = "return all products with cost less than or equal param")
-    @Parameter(name = "available", description = "return all products with available number in stock at least param")
-    @Parameter(name = "rating", description = "return all products with rating at least param")
+    @Parameter(name = "cost", description = "return only products with cost less than or equal param")
+    @Parameter(name = "available", description = "return only products with available number in stock at least param")
+    @Parameter(name = "rating", description = "return only products with rating at least param")
+    @ApiResponses(value = { @ApiResponse( content = {
+            @Content( mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = Product.class)))})})
     public Iterable<Product> get(@RequestParam Optional<Integer> cost, @RequestParam Optional<Integer> available, @RequestParam Optional<Integer> rating){
         int costNum=Integer.MAX_VALUE, availableNum=0, ratingNum=0;
 
@@ -50,7 +55,7 @@ public class ProductController {
     @Parameter(description = "id of product that should be returned")
     @ApiResponses({
             @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "product with given id does not exist")
+            @ApiResponse(responseCode = "404", description = "product with given id does not exist", content=@Content)
     })
     public Product get(@PathVariable Long id){
         Optional<Product> res = productService.readById(id);
@@ -64,8 +69,8 @@ public class ProductController {
     @Parameter(description = "id of product that should be edited")
     @ApiResponses({
             @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "product with given id does not exist"),
-            @ApiResponse(responseCode = "409", description = "id of given product does not match id of product that should be edited")
+            @ApiResponse(responseCode = "404", description = "product with given id does not exist", content=@Content),
+            @ApiResponse(responseCode = "409", description = "id of given product does not match id of product that should be edited", content=@Content)
     })
     public void update(@PathVariable Long id, @RequestBody Product data){
         try{
@@ -75,26 +80,6 @@ public class ProductController {
         } catch (IllegalStateException e){
             throw new ResponseStatusException(HttpStatus.CONFLICT);
         }
-    }
-
-    @PatchMapping(value = "/{id}")
-    @Operation(description = "edit product with given id")
-    @Parameter(description = "id of product that should be edited")
-    @ApiResponses({
-            @ApiResponse(responseCode = "200"),
-            @ApiResponse(responseCode = "404", description = "product with given id does not exist")
-    })
-    public void patch(@PathVariable Long id, @RequestBody JsonNode data){
-        Optional<Product> savedData = productService.readById(id);
-        if(savedData.isEmpty()) throw new ResponseStatusException((HttpStatus.NOT_FOUND));
-
-        Product toEdit = savedData.get();
-
-        if(data.has("name")) toEdit.setName(data.get("name").asText());
-        if(data.has("cost")) toEdit.setCost(data.get("cost").asInt());
-        if(data.has("numberOfAvailable")) toEdit.setNumberOfAvailable(data.get("numberOfAvailable").asInt());
-
-        productService.update(id,toEdit);
     }
 
     @DeleteMapping(value = "/{id}")
