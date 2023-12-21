@@ -3,7 +3,8 @@ CZCv2 - TJV semestrální práce
 Popis:
 Ve složce server se nachází zdrojový kód k serverové části aplikace, ve složce client se nachází zdrojový kód klienta.
 
-Zkompilované soubory lze stáhnout z artefaktů pipeline. Stačí pouze spustit .jar soubory serveru a klienta.
+Zkompilované soubory lze stáhnout z artefaktů pipeline. Stačí pouze spustit .jar soubory serveru a klienta ("java -jar názevSouboru")
+Problém může nastat při chybějící nebo staré verze javy, v tomto případě je třeba aktualizovat ("apt install openjdk-17-jdk")
 
 Webový klient se nachází na adrese
 http://localhost:9080/
@@ -13,4 +14,5 @@ Testy se spouští automaticky při kompilaci, každá úspěšná pipeline by t
 Databáze obsahuje 3 entity:
 Buyer, Product a Review 
 Serverové API na všech entitách zpřístupňuje CRUD operace + některé operace navíc. 
-Webový klient taktéž umožňuje provádět všechny CRUD operace na všech entitách + komplexní operaci koupení produktu (kontrola dostupnosti, přidání k uživateli, upravení dostupnosti)
+Webový klient taktéž umožňuje provádět všechny CRUD operace na všech entitách + komplexní operaci koupení produktu 
+(kontrola dostupnosti, přidání k uživateli, upravení dostupnosti)
