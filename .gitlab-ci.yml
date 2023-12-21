@@ -3,7 +3,7 @@ stages:
 
 server:
     stage: build
-    image: gradle:jdk17
+    image: eclipse-temurin:17
     script:
         ./server/gradlew build
     artifacts:
@@ -13,7 +13,7 @@ server:
 
 client:
     stage: build
-    image: gradle:jdk17
+    image: eclipse-temurin:17
     script:
         ./client/gradlew build
     artifacts:
