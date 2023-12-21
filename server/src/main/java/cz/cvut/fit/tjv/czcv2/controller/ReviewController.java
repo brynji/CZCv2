@@ -1,6 +1,5 @@
 package cz.cvut.fit.tjv.czcv2.controller;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import cz.cvut.fit.tjv.czcv2.domain.Buyer;
 import cz.cvut.fit.tjv.czcv2.domain.Product;
 import cz.cvut.fit.tjv.czcv2.domain.Review;

@@ -1,1 +1,11 @@
-test xd
+CZCv2 - TJV semestrální práce
+
+Popis:
+Ve složce server se nachází zdrojový kód k serverové části aplikace, ve složce client se nachází zdrojový kód klienta.
+
+Zkompilované soubory lze stáhnout z artefaktů pipeline. Stačí pouze spustit .jar soubory serveru a klienta.
+
+Webový klient se nachází na adrese
+http://localhost:9080/
+
+

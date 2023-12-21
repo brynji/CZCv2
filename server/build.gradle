@@ -6,7 +6,7 @@ plugins {
 
 apply plugin: 'application'
 
-group = 'org.example'
+group = 'cz.cvut.fit.tjv.czcv2'
 version = '1.0'
 
 sourceCompatibility = JavaVersion.VERSION_17

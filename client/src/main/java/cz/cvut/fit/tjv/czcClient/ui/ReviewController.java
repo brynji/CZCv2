@@ -1,6 +1,5 @@
 package cz.cvut.fit.tjv.czcClient.ui;
 
-import cz.cvut.fit.tjv.czcClient.domain.Product;
 import cz.cvut.fit.tjv.czcClient.domain.Review;
 import cz.cvut.fit.tjv.czcClient.domain.ReviewDto;
 import cz.cvut.fit.tjv.czcClient.service.ReviewService;

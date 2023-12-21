@@ -3,7 +3,6 @@ package cz.cvut.fit.tjv.czcv2.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 

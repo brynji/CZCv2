@@ -1,14 +1,10 @@
 package cz.cvut.fit.tjv.czcv2.service;
 
 import cz.cvut.fit.tjv.czcv2.domain.Review;
-import cz.cvut.fit.tjv.czcv2.repository.BuyerRepository;
 import cz.cvut.fit.tjv.czcv2.repository.ProductRepository;
 import cz.cvut.fit.tjv.czcv2.repository.ReviewRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
-
-import javax.management.BadAttributeValueExpException;
-import java.nio.file.FileAlreadyExistsException;
 
 @Component
 public class ReviewServiceImpl extends CrudServiceImpl<Review,Long> implements ReviewService {
