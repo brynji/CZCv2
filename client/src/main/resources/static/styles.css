@@ -1,6 +1,17 @@
 h1 {
     color: hotpink;
 }
+.error {
+  color: red;
+}
+.addNewButton {
+    display: inline-block;
+    padding-top: 30px;
+}
+.buyProductForm {
+    display: inline-block;
+    padding-top: 30px;
+}
 
 /* MAIN HEADER */
 .main-header ul{
@@ -30,6 +41,7 @@ h1 {
     border-collapse: collapse;
     margin-top: 40px;
     width: 100%;
+    margin-bottom: 50px;
 }
 .fancy-table th {
     text-align: left;
@@ -45,7 +57,3 @@ h1 {
     background-color: #f1bad2;
 }
 
-.addNewButton {
-    display: inline-block;
-    padding-top: 30px;
-}

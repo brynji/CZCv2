@@ -12,8 +12,8 @@ import java.util.*;
 
 @Component
 public class ProductClient {
-    private String baseUrl;
-    private RestClient productRestClient;
+    private final String baseUrl;
+    private final RestClient productRestClient;
     private RestClient currentProductRestClient;
 
     public ProductClient(@Value("${server.url}") String baseUrl) {

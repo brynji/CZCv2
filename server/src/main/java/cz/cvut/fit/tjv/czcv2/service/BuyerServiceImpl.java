@@ -7,7 +7,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BuyerServiceImpl extends CrudServiceImpl<Buyer,Long> implements BuyerService{
-    private BuyerRepository buyerRepository;
+    private final BuyerRepository buyerRepository;
+
+    @Override
+    public void removeFromBought(Long productId) {
+        Iterable<Buyer> buyers = buyerRepository.findAll();
+        for (Buyer buyer : buyers) {
+            buyer.getBoughtByMe().removeIf(product -> product.getId().equals(productId));
+            buyerRepository.save(buyer);
+        }
+    }
 
     public BuyerServiceImpl(BuyerRepository buyerRepository){
         this.buyerRepository=buyerRepository;

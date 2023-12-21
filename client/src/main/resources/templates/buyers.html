@@ -11,6 +11,7 @@
 <table class="fancy-table">
   <thead>
   <tr>
+    <th>ID</th>
     <th>Username</th>
     <th>Real Name</th>
     <th>Bought products</th>
@@ -18,7 +19,7 @@
   </thead>
   <tbody>
   <tr th:each="u: ${allBuyers}" th:onclick="'navigateTo(' + ${u.id} + ')'">
-    <td th:hidden="${u.id}">id</td>
+    <td th:text="${u.id}">id</td>
     <td th:text="${u.username}">test</td>
     <td th:text="${u.realName}">real test</td>
     <td th:text="${u.boughtByMe}">bought products</td>
@@ -28,7 +29,7 @@
 <a class="addNewButton" href="/buyers/add">Add new buyer</a>
 <script>
   function navigateTo(productId) {
-    window.location.href = window.location.origin + '/products/' + productId;
+    window.location.href = window.location.origin + '/buyers/' + productId;
   }
 </script>
 </body>

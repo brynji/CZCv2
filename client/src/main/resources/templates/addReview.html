@@ -8,15 +8,18 @@
 <body>
 <div th:insert="~{fragments::header}"></div>
 <h1> Add new review</h1>
+<div th:if="${error}">
+  <h2 class="error" th:text="${error}">Invalid author ID</h2>
+</div>
 <form method="post" th:action="@{/reviews/add}" th:object="${newReview}">
   <div>
     <label for="rating">Rating: </label>
     <input type="hidden" th:field="*{productId}">
-    <input type="number" id="rating" th:field="*{rating}" required>
+    <input type="number" id="rating" th:field="*{rating}" required max="100" min="0">
     <label for="comment">Comment: </label>
     <input type="text" id="comment" th:field="*{comment}">
     <label for="authorId">AuthorID: </label>
-    <input type="text" id="authorId" th:field="*{authorId}">
+    <input type="number" id="authorId" th:field="*{authorId}">
   </div>
   <input type="submit" value="Add"/>
   <input type="reset"/>

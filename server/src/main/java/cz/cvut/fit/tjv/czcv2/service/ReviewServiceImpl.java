@@ -12,14 +12,12 @@ import java.nio.file.FileAlreadyExistsException;
 
 @Component
 public class ReviewServiceImpl extends CrudServiceImpl<Review,Long> implements ReviewService {
-    private ReviewRepository reviewRepository;
-    private ProductRepository productRepository;
-    private BuyerRepository buyerRepository;
+    private final ReviewRepository reviewRepository;
+    private final ProductRepository productRepository;
 
-    public ReviewServiceImpl(ReviewRepository reviewRepository, ProductRepository productRepository, BuyerRepository buyerRepository) {
+    public ReviewServiceImpl(ReviewRepository reviewRepository, ProductRepository productRepository) {
         this.reviewRepository = reviewRepository;
         this.productRepository = productRepository;
-        this.buyerRepository = buyerRepository;
     }
 
     @Override

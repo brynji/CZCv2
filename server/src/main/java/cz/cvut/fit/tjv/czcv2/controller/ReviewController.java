@@ -24,9 +24,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value = "/review")
 public class ReviewController {
-    private ReviewService reviewService;
-    private BuyerService buyerService;
-    private ProductService productService;
+    private final ReviewService reviewService;
+    private final BuyerService buyerService;
+    private final ProductService productService;
 
     public ReviewController(ReviewService reviewService, BuyerService buyerService, ProductService productService) {
         this.reviewService = reviewService;
@@ -84,7 +84,12 @@ public class ReviewController {
             @ApiResponse(responseCode = "404", description = "review with given id does not exist", content=@Content),
             @ApiResponse(responseCode = "409", description = "id of given review does not match id of review that should be edited", content=@Content)
     })
-    public void edit(@PathVariable Long id, @RequestBody Review data){
+    public void edit(@PathVariable Long id, @RequestBody ReviewDTO dto){
+        Optional<Buyer> buyer = buyerService.readById(dto.getAuthorId());
+        Optional<Product> product = productService.readById(dto.getProductId());
+
+        Review data = new Review(dto.getId(), dto.getRating(), dto.getComment(), buyer.get(), product.get());
+
         try{
             reviewService.update(id,data);
         } catch (IllegalArgumentException e){

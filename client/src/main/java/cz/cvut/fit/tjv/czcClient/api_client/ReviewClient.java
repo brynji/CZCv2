@@ -12,8 +12,8 @@ import java.util.*;
 
 @Component
 public class ReviewClient {
-    private String baseUrl;
-    private RestClient reviewRestClient;
+    private final String baseUrl;
+    private final RestClient reviewRestClient;
     private RestClient currentReviewRestClient;
 
     public ReviewClient(@Value("${server.url}") String baseUrl) {

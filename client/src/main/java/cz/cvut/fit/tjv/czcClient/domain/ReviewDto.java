@@ -18,6 +18,14 @@ public class ReviewDto {
         this.productId = productId;
     }
 
+    public ReviewDto(Review rev){
+        this.id = rev.getId();
+        this.rating = rev.getRating();
+        this.comment = rev.getComment();
+        this.authorId = rev.getAuthor().getId();
+        this.productId = rev.getProduct().getId();
+    }
+
     public Long getId() {
         return id;
     }

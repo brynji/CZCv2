@@ -5,22 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f7e92f4-1bf7-4144-bf79-f0022b732d30" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/BuyerId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/addBuyer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/buyerDetails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/editBuyer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/editReview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/reviewDetails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cz/cvut/fit/tjv/czcv2/controller/ReviewControllerMvcTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/BuyerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/BuyerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ProductClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ReviewClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ReviewClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/ReviewDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/ReviewDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/BuyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/BuyerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/BuyerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ReviewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/addProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/addProduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/addReview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/addReview.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/buyers.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/buyers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/editProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/editProduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/productDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/productDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/BuyerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Buyer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/BuyerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/BuyerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ReviewServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cz/cvut/fit/tjv/czcv2/repository/ProductRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cz/cvut/fit/tjv/czcv2/repository/ProductRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cz/cvut/fit/tjv/czcv2/service/ReviewServiceUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cz/cvut/fit/tjv/czcv2/service/ReviewServiceUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,12 +129,13 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="cz.cvut.fit.tjv.czcv2.controller" />
       <recent name="cz.cvut.fit.tjv.czcv2.repository" />
       <recent name="cz.cvut.fit.tjv.czcv2.service" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CZCv2Main">
-    <configuration name="ProductRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ReviewControllerMvcTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -123,55 +148,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;cz.cvut.fit.tjv.czcv2.repository.ProductRepositoryTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProductRepositoryTest.findByCostLessThanEqualAndNumberOfAvailableGreaterThanEqualAndRatingGreaterThanEqual" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;cz.cvut.fit.tjv.czcv2.repository.ProductRepositoryTest.findByCostLessThanEqualAndNumberOfAvailableGreaterThanEqualAndRatingGreaterThanEqual&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProductRepositoryTest.updateProductRating" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;cz.cvut.fit.tjv.czcv2.repository.ProductRepositoryTest.updateProductRating&quot;" />
+            <option value="&quot;cz.cvut.fit.tjv.czcv2.controller.ReviewControllerMvcTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -206,7 +183,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="generated-requests | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="11" requestIdentifier="#11" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="CZCv2Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -219,20 +202,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.ReviewControllerMvcTest" />
       <item itemvalue="Gradle.ReviewServiceUnitTest" />
-      <item itemvalue="Gradle.ProductRepositoryTest.updateProductRating" />
-      <item itemvalue="Gradle.ProductRepositoryTest" />
-      <item itemvalue="Gradle.ProductRepositoryTest.findByCostLessThanEqualAndNumberOfAvailableGreaterThanEqualAndRatingGreaterThanEqual" />
+      <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="HTTP Request.generated-requests | #2" />
       <item itemvalue="HTTP Request.generated-requests | #11" />
       <item itemvalue="Spring Boot.CZCv2Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ReviewControllerMvcTest" />
         <item itemvalue="HTTP Request.generated-requests | #11" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="Gradle.ReviewServiceUnitTest" />
-        <item itemvalue="Gradle.ProductRepositoryTest.updateProductRating" />
-        <item itemvalue="Gradle.ProductRepositoryTest.findByCostLessThanEqualAndNumberOfAvailableGreaterThanEqualAndRatingGreaterThanEqual" />
-        <item itemvalue="Gradle.ProductRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -316,8 +299,22 @@
       <workItem from="1702814223997" duration="705000" />
       <workItem from="1702821360766" duration="3037000" />
       <workItem from="1702834755674" duration="1405000" />
-      <workItem from="1702837799319" duration="1495000" />
+      <workItem from="1702837799319" duration="1555000" />
+      <workItem from="1702920837747" duration="1125000" />
+      <workItem from="1702998437241" duration="5387000" />
+      <workItem from="1703083367289" duration="2027000" />
+      <workItem from="1703101240048" duration="10091000" />
+      <workItem from="1703146637792" duration="539000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1702839351292</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702839351292</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

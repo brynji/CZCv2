@@ -13,7 +13,7 @@
         <label for="name">Name: </label>
         <input type="text" id="name" th:field="*{name}" required>
         <label for="cost">Cost: </label>
-        <input type="number" id="cost" th:field="*{cost}" required>
+        <input type="number" id="cost" th:field="*{cost}" required min="0">
         <label for="numberOfAvailable">Number of Available: </label>
         <input type="number" id="numberOfAvailable" th:field="*{numberOfAvailable}" required>
     </div>

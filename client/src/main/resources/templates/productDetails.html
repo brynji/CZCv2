@@ -3,19 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{/styles.css}"/>
-    <title>ProductDetails</title>
+    <title>Product Details</title>
 </head>
 <body>
 <div th:insert="~{fragments::header}"></div>
 <div th:object="${currentProduct}">
-    <h1 th:text="*{name}">name</h1>
+    <h1>Product Details</h1>
+    <h2 th:text="*{name}">name</h2>
     <p th:text="'Rating: ' + *{rating}">Rating 5 </p>
     <p th:text="'Cost: ' + *{cost}">Cost 100 </p>
-    <p th:text="'Reviews: ' + *{reviews}">Reviews </p>
+    <p th:text="'Available pieces: '+ *{numberOfAvailable}">5</p>
 
-    <a th:href="'/reviews/add/'+${id}">Add review</a>
-    <a th:href="'/products/'+${id}+'/delete'">Delete product</a>
-    <a th:href="'/products/'+${id}+'/edit'">Edit product</a>
+    <h3>Reviews:</h3>
+
+    <table class="fancy-table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Comment</th>
+            <th>Rating</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="r: *{reviews}" th:onclick="'navigateTo(' + ${r.id} + ')'">
+            <td th:text="${r.author.realName}" >Danicek</td>
+            <td th:text="${r.comment}">Uzasna recenze</td>
+            <td th:text="${#numbers.formatDecimal(r.rating,1,0)}">95</td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="'/reviews/add/'+${currentProduct.id}">Add review</a>
+    <a th:href="'/products/'+${currentProduct.id}+'/delete'">Delete product</a>
+    <a th:href="'/products/'+${currentProduct.id}+'/edit'">Edit product</a>
 </div>
+    <span class="error" th:if="${invalidBuyerId}">Invalid buyer ID</span>
+    <span class="error" th:if="${nothingOnStock}">No product available</span>
+    <form class="buyProductForm" method="post" th:action="'/buyers/addBought/'+${currentProduct.id}" th:object="${buyerId}">
+        <label for="buyerId">Buyer ID: </label>
+        <input type="number" id="buyerId" th:field="*{id}" required/>
+        <input type="submit" value="BUY"/>
+    </form>
+<script>
+    function navigateTo(productId) {
+        window.location.href = window.location.origin + '/reviews/' + productId;
+    }
+</script>
 </body>
 </html>

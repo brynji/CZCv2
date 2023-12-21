@@ -9,7 +9,7 @@ import java.util.Collection;
 
 @Component
 public class ProductServiceImpl extends  CrudServiceImpl<Product,Long> implements ProductService {
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public ProductServiceImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;

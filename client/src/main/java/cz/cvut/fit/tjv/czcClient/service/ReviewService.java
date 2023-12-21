@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 public class ReviewService {
-    private ReviewClient reviewClient;
+    private final ReviewClient reviewClient;
     private Long currentReview;
 
     public ReviewService(ReviewClient reviewClient) { this.reviewClient = reviewClient; }

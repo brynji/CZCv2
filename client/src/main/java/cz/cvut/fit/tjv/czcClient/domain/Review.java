@@ -11,11 +11,6 @@ public class Review {
     @JsonIgnoreProperties("reviews")
     private Product product;
 
-    @Override
-    public String toString() {
-        return author.getRealName()+": "+comment+"\n Rating: "+rating;
-    }
-
     public Long getId() {
         return id;
     }

@@ -11,8 +11,8 @@ import java.util.*;
 
 @Component
 public class BuyerClient {
-    private String baseUrl;
-    private RestClient buyerRestClient;
+    private final String baseUrl;
+    private final RestClient buyerRestClient;
     private RestClient currentBuyerRestClient;
     public BuyerClient(@Value("${server.url}") String baseUrl) {
         this.baseUrl = baseUrl;
@@ -64,6 +64,17 @@ public class BuyerClient {
 
     public void delete(){
         currentBuyerRestClient.delete()
+                .retrieve()
+                .toBodilessEntity();
+    }
+
+    public void buy(Long buyerId, Long productId){
+        var buyBuyerRestClient = RestClient.builder()
+                .baseUrl(baseUrl+"/buyer/{buyerId}/boughtBy/{productId}")
+                .defaultUriVariables(Map.of("buyerId",buyerId,"productId",productId))
+                .build();
+
+        var res = buyBuyerRestClient.post()
                 .retrieve()
                 .toBodilessEntity();
     }

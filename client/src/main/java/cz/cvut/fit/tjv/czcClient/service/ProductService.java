@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 public class ProductService {
-    private ProductClient productClient;
+    private final ProductClient productClient;
     private Long currentProduct;
 
     public ProductService(ProductClient productClient) { this.productClient = productClient; }

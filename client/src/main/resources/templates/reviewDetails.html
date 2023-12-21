@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/styles.css}"/>
+  <title>Review Details</title>
+</head>
+<body>
+<div th:insert="~{fragments::header}"></div>
+<div th:object="${currentReview}">
+  <h1>Review details</h1>
+  <h2 th:text="*{product.name}">Product name</h2>
+  <p th:text="'Author: ' + *{author.username}">asddsaads</p>
+  <p th:text="'Rating: ' + *{rating}">15</p>
+  <p th:text="'Comment: ' + *{comment}">Genialni vec</p>
+
+  <a th:href="'/reviews/'+${id}+'/delete'">Delete review</a>
+  <a th:href="'/reviews/'+${id}+'/edit'">Edit review</a>
+</div>
+</body>
+</html>

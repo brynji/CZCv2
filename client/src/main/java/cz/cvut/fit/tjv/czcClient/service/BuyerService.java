@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Service
 public class BuyerService {
-    private BuyerClient buyerClient;
+    private final BuyerClient buyerClient;
     private Long currentBuyer;
 
     public BuyerService(BuyerClient buyerClient) { this.buyerClient = buyerClient; }
@@ -25,4 +25,6 @@ public class BuyerService {
     public Collection<Buyer> getAll(){ return buyerClient.getAll(); }
     public void update(Buyer data){ buyerClient.update(data); }
     public void delete(){ buyerClient.delete(); }
+
+    public void buy(Long buyerId, Long productId){ buyerClient.buy(buyerId,productId); }
 }

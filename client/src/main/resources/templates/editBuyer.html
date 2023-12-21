@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/styles.css" th:href="@{/styles.css}"/>
+    <title>Edit buyer</title>
+</head>
+<body>
+<div th:insert="~{fragments::header}"></div>
+<h1> Edit buyer</h1>
+<form method="post" th:action="@{/buyers/edit}" th:object="${toEditBuyer}">
+    <div>
+        <input type="hidden" th:field="*{id}">
+        <label for="username">Username: </label>
+        <input type="text" id="username" th:field="*{username}" required>
+        <label for="realName">Real Name </label>
+        <input type="text" id="realName" th:field="*{realName}" required>
+        <label for="address">Address: </label>
+        <input type="text" id="address" th:field="*{address}" required>
+    </div>
+    <input type="submit" value="Confirm"/>
+    <input type="reset"/>
+</form>
+</body>
+</html>

@@ -16,7 +16,7 @@ public class Buyer implements EntityWithId<Long>{
     private String address;
     private String realName;
     @ManyToMany
-    private Collection<Product> boughtByMe = new ArrayList<>();
+    private Collection<Product> boughtByMe = new HashSet<>();
     @OneToMany(mappedBy = "author", orphanRemoval = true)
     @JsonIgnoreProperties("author")
     private Collection<Review> myReviews = new HashSet<>();

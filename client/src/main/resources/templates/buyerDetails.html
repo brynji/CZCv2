@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+    <title>Buyer Details</title>
+</head>
+<body>
+<div th:insert="~{fragments::header}"></div>
+<div th:object="${currentBuyer}">
+    <h1>Buyer details</h1>
+    <h2 th:text="*{username}">username</h2>
+    <p th:text="'ID: ' + *{id}">153</p>
+    <p th:text="'Name: ' + *{realName}">Adam Dan</p>
+    <p th:text="'Address: ' + *{address}">Praha 68513</p>
+
+    <table class="fancy-table">
+        <thead>
+        <tr>
+            <th>Bought products</th>
+            <th>Rating</th>
+            <th>Cost</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="p: *{boughtByMe}" th:onclick="'navigateTo(' + ${p.id} + ')'">
+            <td th:text="${p.name}" >Susenka</td>
+            <td th:text="${#numbers.formatDecimal(p.rating,1,0)}">95</td>
+            <td th:text="${p.cost}">5060</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a th:href="'/buyers/'+${id}+'/delete'">Delete buyer</a>
+    <a th:href="'/buyers/'+${id}+'/edit'">Edit buyer</a>
+</div>
+<script>
+    function navigateTo(id) {
+        window.location.href = window.location.origin + '/products/' + id;
+    }
+</script>
+</body>
+</html>

@@ -20,8 +20,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value = "/buyer")
 public class BuyerController {
-    private BuyerService buyerService;
-    private ProductService productService;
+    private final BuyerService buyerService;
+    private final ProductService productService;
 
     public BuyerController(BuyerService buyerService, ProductService productService) {
         this.buyerService = buyerService;
@@ -41,7 +41,7 @@ public class BuyerController {
             @ApiResponse(responseCode = "200"),
             @ApiResponse(responseCode = "404", description = "user or product with given id does not exist", content=@Content)
     })
-    public Buyer addBought(@PathVariable Long id, @PathVariable Long productId){
+    public void addBought(@PathVariable Long id, @PathVariable Long productId){
         Optional<Product> toAdd = productService.readById(productId);
         Optional<Buyer> buyer = buyerService.readById(id);
         if(buyer.isEmpty() || toAdd.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
@@ -49,7 +49,6 @@ public class BuyerController {
         Buyer data = buyer.get();
         data.getBoughtByMe().add(toAdd.get());
         buyerService.update(id,data);
-        return data;
     }
 
     @GetMapping

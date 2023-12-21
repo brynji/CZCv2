@@ -2,6 +2,7 @@ package cz.cvut.fit.tjv.czcv2.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import cz.cvut.fit.tjv.czcv2.domain.Product;
+import cz.cvut.fit.tjv.czcv2.service.BuyerService;
 import cz.cvut.fit.tjv.czcv2.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -19,10 +20,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value ="/product")
 public class ProductController {
-    private ProductService productService;
+    private final ProductService productService;
+    private final BuyerService buyerService;
 
-    public ProductController(ProductService productService) {
+    public ProductController(ProductService productService, BuyerService buyerService) {
         this.productService = productService;
+        this.buyerService = buyerService;
     }
 
     @PostMapping
@@ -86,6 +89,7 @@ public class ProductController {
     @Operation(description = "remove product with given id from stock")
     @Parameter(description = "id of product that should be removed")
     public void delete(@PathVariable Long id){
+        buyerService.removeFromBought(id);
         productService.deleteById(id);
     }
 }

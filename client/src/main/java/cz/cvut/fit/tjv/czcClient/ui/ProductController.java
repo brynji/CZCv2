@@ -1,5 +1,6 @@
 package cz.cvut.fit.tjv.czcClient.ui;
 
+import cz.cvut.fit.tjv.czcClient.domain.BuyerId;
 import cz.cvut.fit.tjv.czcClient.domain.Filters;
 import cz.cvut.fit.tjv.czcClient.domain.Product;
 import cz.cvut.fit.tjv.czcClient.service.ProductService;
@@ -12,7 +13,7 @@ import java.util.Optional;
 @Controller
 @RequestMapping("/products")
 public class ProductController {
-    private ProductService productService;
+    private final ProductService productService;
 
     public ProductController(ProductService productService) { this.productService = productService; }
 
@@ -41,6 +42,7 @@ public class ProductController {
         productService.setCurrentProduct(id);
         Optional<Product> product = productService.getOne();
         model.addAttribute("currentProduct",product.get());
+        model.addAttribute("buyerId",new BuyerId());
         return "productDetails";
     }
 
