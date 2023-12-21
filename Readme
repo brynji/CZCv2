@@ -8,4 +8,9 @@ Zkompilované soubory lze stáhnout z artefaktů pipeline. Stačí pouze spustit
 Webový klient se nachází na adrese
 http://localhost:9080/
 
+Testy se spouští automaticky při kompilaci, každá úspěšná pipeline by tedy měla obsahovat funkční soubory.
 
+Databáze obsahuje 3 entity:
+Buyer, Product a Review 
+Serverové API na všech entitách zpřístupňuje CRUD operace + některé operace navíc. 
+Webový klient taktéž umožňuje provádět všechny CRUD operace na všech entitách + komplexní operaci koupení produktu (kontrola dostupnosti, přidání k uživateli, upravení dostupnosti)
