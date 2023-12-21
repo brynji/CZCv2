@@ -5,46 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f7e92f4-1bf7-4144-bf79-f0022b732d30" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/BuyerId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/addBuyer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/buyerDetails.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/editBuyer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/editReview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/reviewDetails.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cz/cvut/fit/tjv/czcv2/controller/ReviewControllerMvcTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/BuyerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/BuyerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ProductClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ReviewClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/api_client/ReviewClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/ReviewDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/domain/ReviewDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/BuyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/BuyerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/service/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/BuyerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/cz/cvut/fit/tjv/czcClient/ui/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/static/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/addProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/addProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/addReview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/addReview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/buyers.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/buyers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/editProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/editProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/productDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/productDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/templates/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/BuyerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/controller/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Buyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/BuyerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/repository/BuyerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/BuyerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/cvut/fit/tjv/czcv2/service/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +266,7 @@
       <workItem from="1702998437241" duration="5387000" />
       <workItem from="1703083367289" duration="2027000" />
       <workItem from="1703101240048" duration="10091000" />
-      <workItem from="1703146637792" duration="539000" />
+      <workItem from="1703146637792" duration="936000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
