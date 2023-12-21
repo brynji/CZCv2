@@ -9,6 +9,11 @@ Problém může nastat při chybějící nebo staré verze javy, v tomto přípa
 Webový klient se nachází na adrese
 http://localhost:9080/
 
+Server běží na adrese
+http://localhost:8080/
+
+Databáze je hostovaná na Azure
+
 Testy se spouští automaticky při kompilaci, každá úspěšná pipeline by tedy měla obsahovat funkční soubory.
 
 Databáze obsahuje 3 entity:
