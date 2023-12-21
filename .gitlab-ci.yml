@@ -1,0 +1,20 @@
+stages:
+    build
+
+server:
+    stage: build
+    script:
+        ./server/gradlew build
+    artifacts:
+    name: "Server"
+    paths:
+      - "**/target/*.jar"
+
+client:
+    stage: build
+    script:
+        ./client/gradlew build
+    artifacts:
+    name: "Client"
+    paths:
+      - "**/target/*.jar"
