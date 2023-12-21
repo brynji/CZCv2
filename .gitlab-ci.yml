@@ -5,8 +5,8 @@ server:
     stage: build
     image: eclipse-temurin:17
     script:
-        cd server
-        ./gradlew build
+        - cd server
+        - ./gradlew build
     artifacts:
         name: "Server"
         paths:
@@ -16,8 +16,8 @@ client:
     stage: build
     image: eclipse-temurin:17
     script:
-        cd client
-        ./gradlew build
+        - cd client
+        - ./gradlew build
     artifacts:
         name: "Client"
         paths:
