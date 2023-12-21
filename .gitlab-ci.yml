@@ -6,15 +6,15 @@ server:
     script:
         ./server/gradlew build
     artifacts:
-    name: "Server"
-    paths:
-      - "**/target/*.jar"
+        name: "Server"
+        paths:
+            - "**/target/*.jar"
 
 client:
     stage: build
     script:
         ./client/gradlew build
     artifacts:
-    name: "Client"
-    paths:
-      - "**/target/*.jar"
+        name: "Client"
+        paths:
+             - "**/target/*.jar"
