@@ -3,6 +3,7 @@ stages:
 
 server:
     stage: build
+    image: gradle:jdk17
     script:
         ./server/gradlew build
     artifacts:
@@ -12,6 +13,7 @@ server:
 
 client:
     stage: build
+    image: gradle:jdk17
     script:
         ./client/gradlew build
     artifacts:
