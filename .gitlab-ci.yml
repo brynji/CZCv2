@@ -10,7 +10,7 @@ server:
     artifacts:
         name: "Server"
         paths:
-            - "**/target/*.jar"
+            - "**/libs/CZCv2-1.0.jar"
 
 client:
     stage: build
@@ -21,4 +21,4 @@ client:
     artifacts:
         name: "Client"
         paths:
-             - "**/target/*.jar"
+             - "**/libs/client-1.0.jar"
