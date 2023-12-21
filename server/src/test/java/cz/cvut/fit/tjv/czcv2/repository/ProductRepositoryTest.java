@@ -37,7 +37,7 @@ public class ProductRepositoryTest {
         review.setRating(50);
         reviewRepository.save(review);
         productRepository.updateProductRating(pr.getId());
-        Assertions.assertEquals(150,productRepository.getProductRating(id));
+        Assertions.assertEquals(50,productRepository.getProductRating(id));
 
         review.setId(2L);
         review.setRating(100);
