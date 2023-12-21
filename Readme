@@ -14,6 +14,9 @@ http://localhost:8080/
 
 Databáze je hostovaná na Azure
 
+Dokumentace k API je po zapnutí aplikace na adrese
+http://localhost:8080/swagger-ui/index.html
+
 Testy se spouští automaticky při kompilaci, každá úspěšná pipeline by tedy měla obsahovat funkční soubory.
 
 Databáze obsahuje 3 entity:
