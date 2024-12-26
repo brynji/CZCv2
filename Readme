@@ -3,9 +3,6 @@ CZCv2 - TJV semestrální práce
 Popis:
 Ve složce server se nachází zdrojový kód k serverové části aplikace, ve složce client se nachází zdrojový kód klienta.
 
-Zkompilované soubory lze stáhnout z artefaktů pipeline. Stačí pouze spustit .jar soubory serveru a klienta ("java -jar názevSouboru")
-Problém může nastat při chybějící nebo staré verze javy, v tomto případě je třeba aktualizovat ("apt install openjdk-17-jdk")
-
 Webový klient se nachází na adrese
 http://localhost:9080/
 
@@ -16,8 +13,6 @@ Databáze je hostovaná na Azure
 
 Dokumentace k API je po zapnutí aplikace na adrese
 http://localhost:8080/swagger-ui/index.html
-
-Testy se spouští automaticky při kompilaci, každá úspěšná pipeline by tedy měla obsahovat funkční soubory.
 
 Databáze obsahuje 3 entity:
 Buyer, Product a Review 
