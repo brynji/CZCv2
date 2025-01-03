@@ -1,4 +1,4 @@
-CZCv2 - TJV semestrální práce
+CZCv2 - TJV semestrální práce, prosinec 2023
 
 Popis:
 Ve složce server se nachází zdrojový kód k serverové části aplikace, ve složce client se nachází zdrojový kód klienta.
@@ -9,7 +9,7 @@ http://localhost:9080/
 Server běží na adrese
 http://localhost:8080/
 
-Databáze je hostovaná na Azure
+Databáze byla v době odevzdání hostovaná na Azure, nyní je pouze lokálně a je prázdná
 
 Dokumentace k API je po zapnutí aplikace na adrese
 http://localhost:8080/swagger-ui/index.html
